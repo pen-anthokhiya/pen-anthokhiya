@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="Let's talk — pronoynath890@gmail.com">
+  <defs>
+    <clipPath id="card"><rect width="1200" height="440" rx="28"/></clipPath>
+    <filter id="blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="80"/></filter>
+    <linearGradient id="flow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="900" y2="0" spreadMethod="repeat">
+      <stop offset="0" stop-color="#ff5a1f"/>
+      <stop offset="0.33" stop-color="#ff2e88"/>
+      <stop offset="0.66" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#ff5a1f"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="900 0" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .sans { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    .meta { font-size: 13px; letter-spacing: 3px; font-weight: 600; fill: #a1a1aa; }
+    .fade { opacity: 0; animation: fade 1s ease forwards; }
+    .outline { fill: transparent; stroke: #f5f5f4; stroke-width: 1.5; stroke-dasharray: 1400; stroke-dashoffset: 1400;
+               animation: outline 2.6s cubic-bezier(.65,0,.35,1) .3s forwards, fill 1.2s ease 2.4s forwards; }
+    .draw { stroke-dasharray: 1088; stroke-dashoffset: 1088; animation: draw 1.4s cubic-bezier(.77,0,.18,1) 1s forwards; }
+    .blob { animation: drift 14s ease-in-out infinite alternate; }
+    .dot  { animation: blink 1.6s ease-in-out infinite; }
+    .arrow { animation: nudge 1.8s ease-in-out infinite; }
+    @keyframes fade { to { opacity: 1; } }
+    @keyframes outline { to { stroke-dashoffset: 0; } }
+    @keyframes fill { to { fill: url(#flow); stroke-opacity: 0; } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes drift { to { transform: translate(-420px, 60px) scale(1.3); } }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+    @keyframes nudge { 0%,100% { transform: translate(0,0); } 50% { transform: translate(6px,-6px); } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .fade { opacity: 1; } .outline { stroke-dashoffset: 0; } .draw { stroke-dashoffset: 0; }
+    }
+  </style>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="440" fill="#0a0a0b"/>
+    <g filter="url(#blur)" opacity="0.4"><circle class="blob" cx="1000" cy="120" r="180" fill="#ff5a1f"/></g>
+
+    <text class="sans meta fade" x="56" y="58">( 03 ) — CONTACT</text>
+    <g class="sans fade" style="animation-delay:.2s">
+      <circle class="dot" cx="994" cy="53" r="5" fill="#22c55e"/>
+      <text class="meta" x="1144" y="58" text-anchor="end">OPEN TO WORK</text>
+    </g>
+
+    <text class="sans outline" x="48" y="250" font-size="172" font-weight="800" letter-spacing="-6">LET'S TALK</text>
+
+    <line class="draw" x1="56" y1="318" x2="1144" y2="318" stroke="#ffffff" stroke-opacity="0.2"/>
+
+    <g class="sans fade" style="animation-delay:1.6s">
+      <text x="56" y="378" font-size="26" font-weight="700" fill="#f5f5f4">pronoynath890@gmail.com</text>
+      <g class="arrow"><path d="M408 380 L432 356 M413 356 H432 V375" stroke="#ff5a1f" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+      <text class="meta" x="1144" y="376" text-anchor="end">© 2026 ANTHOKHIYA NATH · RANGPUR, BD</text>
+    </g>
+  </g>
+</svg>
