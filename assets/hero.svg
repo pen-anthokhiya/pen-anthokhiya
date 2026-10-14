@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-label="Anthokhiya Nath — Full-Stack Developer">
+  <defs>
+    <clipPath id="card"><rect width="1200" height="640" rx="28"/></clipPath>
+    <clipPath id="l1"><rect x="0" y="120" width="900" height="190"/></clipPath>
+    <clipPath id="l2"><rect x="0" y="312" width="900" height="180"/></clipPath>
+
+    <filter id="blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="70"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="1" stitchTiles="stitch">
+        <animate attributeName="seed" values="1;2;3;4;5;6;7;8" dur="0.8s" calcMode="discrete" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+
+    <linearGradient id="flow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="760" y2="0" spreadMethod="repeat">
+      <stop offset="0" stop-color="#ff5a1f"/>
+      <stop offset="0.33" stop-color="#ff2e88"/>
+      <stop offset="0.66" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#ff5a1f"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="760 0" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <path id="ring" d="M1010,330 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/>
+    <path id="cursorPath" d="M 240 300 C 420 140, 640 470, 820 250 S 560 520, 330 430 S 120 220, 240 300"/>
+  </defs>
+
+  <style>
+    .sans { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    .serif { font-family: Georgia, 'Times New Roman', serif; font-style: italic; }
+    .meta { font-size: 13px; letter-spacing: 3px; fill: #a1a1aa; font-weight: 600; }
+
+    .fade { opacity: 0; animation: fade 1s ease forwards; }
+    .rise { transform: translateY(200px); animation: rise 1.3s cubic-bezier(.77,0,.18,1) forwards; }
+    .draw { stroke-dasharray: 1088; stroke-dashoffset: 1088; animation: draw 1.6s cubic-bezier(.77,0,.18,1) forwards; }
+    .col  { stroke-dasharray: 640; stroke-dashoffset: 640; animation: draw 2s cubic-bezier(.65,0,.35,1) forwards; }
+    .spin { transform-origin: 1010px 330px; animation: spin 14s linear infinite; }
+    .pulse { transform-origin: 1010px 330px; animation: pulse 2.4s ease-in-out infinite; }
+    .arrow { transform-origin: 1010px 330px; animation: nudge 2.4s ease-in-out infinite; }
+    .b1 { animation: drift1 16s ease-in-out infinite alternate; }
+    .b2 { animation: drift2 19s ease-in-out infinite alternate; }
+    .b3 { animation: drift3 22s ease-in-out infinite alternate; }
+    .scroll { stroke-dasharray: 40 60; animation: scroll 1.8s linear infinite; }
+
+    @keyframes fade { to { opacity: 1; } }
+    @keyframes rise { to { transform: translateY(0); } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+    @keyframes nudge { 0%,100% { transform: translate(0,0); } 50% { transform: translate(4px,-4px); } }
+    @keyframes drift1 { to { transform: translate(260px, 120px) scale(1.2); } }
+    @keyframes drift2 { to { transform: translate(-300px, -80px) scale(0.85); } }
+    @keyframes drift3 { to { transform: translate(-160px, 140px) scale(1.15); } }
+    @keyframes scroll { to { stroke-dashoffset: -100; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .fade { opacity: 1; } .rise { transform: none; } .draw, .col { stroke-dashoffset: 0; }
+    }
+  </style>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="640" fill="#0a0a0b"/>
+
+    <!-- gradient blobs -->
+    <g filter="url(#blur)" opacity="0.55">
+      <circle class="b1" cx="220" cy="140" r="170" fill="#ff5a1f"/>
+      <circle class="b2" cx="980" cy="480" r="200" fill="#8b5cf6"/>
+      <circle class="b3" cx="700" cy="80" r="140" fill="#ff2e88"/>
+    </g>
+
+    <!-- column grid -->
+    <g stroke="#ffffff" stroke-opacity="0.06">
+      <line class="col" x1="237.3" y1="0" x2="237.3" y2="640"/>
+      <line class="col" x1="418.7" y1="0" x2="418.7" y2="640" style="animation-delay:.1s"/>
+      <line class="col" x1="600" y1="0" x2="600" y2="640" style="animation-delay:.2s"/>
+      <line class="col" x1="781.3" y1="0" x2="781.3" y2="640" style="animation-delay:.3s"/>
+      <line class="col" x1="962.7" y1="0" x2="962.7" y2="640" style="animation-delay:.4s"/>
+    </g>
+
+    <!-- top bar -->
+    <g class="sans meta">
+      <text class="fade" x="56" y="58" style="animation-delay:.2s">ANTHOKHIYA NATH</text>
+      <text class="fade" x="600" y="58" text-anchor="middle" style="animation-delay:.35s">PORTFOLIO — ©2026</text>
+      <text class="fade" x="1144" y="58" text-anchor="end" style="animation-delay:.5s">RANGPUR, BD · 25.7°N</text>
+    </g>
+    <line class="draw" x1="56" y1="82" x2="1144" y2="82" stroke="#ffffff" stroke-opacity="0.25"/>
+
+    <!-- headline -->
+    <g clip-path="url(#l1)">
+      <text class="sans rise" x="48" y="275" font-size="150" font-weight="800" letter-spacing="-7" fill="#f5f5f4" style="animation-delay:.5s">Full-Stack</text>
+    </g>
+    <g clip-path="url(#l2)">
+      <text class="serif rise" x="52" y="445" font-size="150" letter-spacing="-4" fill="url(#flow)" style="animation-delay:.68s">Developer</text>
+    </g>
+    <text class="sans meta fade" x="760" y="160" style="animation-delay:1.4s">( 01 )</text>
+    <text class="sans meta fade" x="760" y="360" style="animation-delay:1.55s">CODE × MOTION</text>
+
+    <!-- rotating badge -->
+    <g class="fade" style="animation-delay:1.2s">
+      <g class="spin">
+        <text class="sans" font-size="13" font-weight="700" letter-spacing="4" fill="#f5f5f4">
+          <textPath xlink:href="#ring" textLength="495">AVAILABLE FOR NEW PROJECTS ✦ OPEN TO COLLABORATE ✦</textPath>
+        </text>
+      </g>
+      <circle class="pulse" cx="1010" cy="330" r="50" fill="#ff5a1f"/>
+      <g class="arrow" stroke="#0a0a0b" stroke-width="5" stroke-linecap="round" fill="none">
+        <path d="M995 345 L1025 315 M1004 315 H1025 V336"/>
+      </g>
+    </g>
+
+    <!-- bottom -->
+    <line class="draw" x1="56" y1="520" x2="1144" y2="520" stroke="#ffffff" stroke-opacity="0.15" style="animation-delay:.9s"/>
+    <g class="sans fade" font-size="19" fill="#d4d4d8" style="animation-delay:1.6s">
+      <text x="56" y="562">I engineer fast, scalable products end-to-end —</text>
+      <text x="56" y="590">type-safe APIs, solid data models &amp; interfaces that move.</text>
+    </g>
+    <g class="sans fade" style="animation-delay:1.8s">
+      <text class="meta" x="1144" y="576" text-anchor="end">( SCROLL )</text>
+      <line class="scroll" x1="1000" y1="571" x2="1000" y2="571" stroke="#ff5a1f"/>
+      <line class="scroll" x1="930" y1="572" x2="1030" y2="572" stroke="#ff5a1f" stroke-width="2"/>
+    </g>
+
+    <!-- blend cursor -->
+    <g style="mix-blend-mode: difference">
+      <circle r="9" fill="#ffffff">
+        <animateMotion dur="9s" repeatCount="indefinite" begin="1.8s"><mpath xlink:href="#cursorPath"/></animateMotion>
+      </circle>
+      <circle r="34" fill="none" stroke="#ffffff" stroke-width="1.5">
+        <animateMotion dur="9s" repeatCount="indefinite" begin="2s"><mpath xlink:href="#cursorPath"/></animateMotion>
+      </circle>
+    </g>
+
+    <!-- film grain -->
+    <rect width="1200" height="640" filter="url(#grain)" opacity="0.09"/>
+  </g>
+</svg>
