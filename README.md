@@ -1,18 +1,7 @@
-### Hi, I'm Anthokhiya Nath 👋
+<img src="./assets/hero.svg" width="100%" alt="Anthokhiya Nath — Full-Stack Developer. I engineer fast, scalable products end-to-end: type-safe APIs, solid data models and interfaces that move." />
 
-**Full-Stack Developer** building fast, scalable web applications — from type-safe APIs and relational data models to polished, animated interfaces.
+<img src="./assets/marquee.svg" width="100%" alt="Tech stack: Next.js, React, TypeScript, Node.js, PostgreSQL, Prisma, GSAP, Tailwind, MongoDB, Redux" />
 
-- 🧩 Multi-tenant SaaS, role-based access control, and workflow-heavy business apps
-- ⚡ Performance-minded frontends with Next.js, React, and smooth GSAP motion
-- 🗄️ Clean data layers with PostgreSQL, Prisma, and well-planned migrations
-- 🧪 Shipping with confidence through Vitest, Playwright, and CI/CD
+<img src="./assets/services.svg" width="100%" alt="What I do: Web Applications, Backend & APIs, Data & Databases, Motion & Interaction" />
 
-#### Tech Stack
-
-[![Stack](https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,redux,nodejs,express,postgres,prisma,mongodb,vitest,git,vercel&perline=14)](https://skillicons.dev)
-
-**Also:** TanStack Query · React Hook Form · Zod · GSAP · shadcn/ui · Playwright · Inngest
-
-#### Get in touch
-
-📍 Rangpur, Bangladesh · ✉️ [pronoynath890@gmail.com](mailto:pronoynath890@gmail.com)
+<a href="mailto:pronoynath890@gmail.com"><img src="./assets/contact.svg" width="100%" alt="Let's talk — pronoynath890@gmail.com" /></a>
